@@ -1,6 +1,7 @@
 .classpath
 .project
 .settings
+.gradle
 /bin
 /test-output
 /build
