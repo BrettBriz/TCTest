@@ -2,5 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="none">
   <test name="Test">
+  <packages>
+  <package name = "com.truecar.tests" /package>
+  </packages>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
