@@ -10,29 +10,29 @@ import com.truecar.navigation.HomepageURL;
 import com.truecar.tools.HomePageLinkCheck;
 
 public class HomePageVerifyLinks {
-	
+
 	WebDriver driver;
 	HomepageURL url;
 	HomePageLinkCheck links;
-	
+
 	@BeforeClass
-	public void setup(){
+	public void setup() {
 		driver = new FirefoxDriver();
 		url = new HomepageURL();
 		url.getHomepageURL(driver);
 		links = new HomePageLinkCheck();
 	}
-	
+
 	@AfterClass
-	public void tearDown(){
+	public void tearDown() {
 		driver.quit();
 	}
-	
+
 	@Test
-	public void homePageVerifyLinks() throws Exception{
-		
+	public void homePageVerifyLinks() throws Exception {
+
 		links.getHomePageLinks(driver);
-		
+
 	}
 
 }

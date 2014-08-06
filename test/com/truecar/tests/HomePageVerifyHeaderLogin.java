@@ -11,31 +11,31 @@ import com.truecar.objects.HomePageHeader;
 import com.truecar.navigation.HomepageURL;
 
 public class HomePageVerifyHeaderLogin {
-	
+
 	WebDriver driver;
 	HomePageHeader header;
 	HomepageURL url;
-	
+
 	@BeforeClass
-	public void setup(){
+	public void setup() {
 		driver = new FirefoxDriver();
 		header = new HomePageHeader();
 		url = new HomepageURL();
 		url.getHomepageURL(driver);
-		
+
 	}
-	
+
 	@AfterClass
-	public void tearDown(){
+	public void tearDown() {
 		driver.quit();
 	}
-	
+
 	@Test
-	public void homePageVerifyLoginLink() throws Exception{
-		
+	public void homePageVerifyLoginLink() throws Exception {
+
 		header.login(driver);
 		Assert.assertEquals("Sign In", driver.findElement(By.cssSelector("h2.h2")).getText());
-		
+
 	}
 
 }

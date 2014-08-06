@@ -11,30 +11,30 @@ import com.truecar.navigation.HomepageURL;
 import com.truecar.objects.Footer;
 
 public class HomepageVerifyDealerPortal {
-	
+
 	WebDriver driver;
 	HomepageURL url;
 	Footer footer;
-	
+
 	@BeforeClass
-	public void setup(){
+	public void setup() {
 		driver = new FirefoxDriver();
 		url = new HomepageURL();
 		url.getHomepageURL(driver);
-		footer = new Footer();	
+		footer = new Footer();
 	}
-	
+
 	@AfterClass
-	public void tearDown(){
+	public void tearDown() {
 		driver.quit();
 	}
-	
+
 	@Test
-	public void homePageVerifyDealerPortalLink () throws Exception {
-		
+	public void homePageVerifyDealerPortalLink() throws Exception {
+
 		footer.dealerLogin(driver);
 		Assert.assertEquals("TrueCar Dealer Network", driver.getTitle());
-		
+
 	}
-	
+
 }
