@@ -34,5 +34,4 @@ public class HomePageVerifyCookie {
 			cookie.cookieCheck(driver);
 			
 		}
-
 }
